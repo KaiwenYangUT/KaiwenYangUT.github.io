@@ -80,7 +80,7 @@ npm run photo
 npm run og
 ```
 
-The source photo is kept outside `public`; generated AVIF/WebP/JPEG files are committed. The script crops to 4:5 and maps luminance from warm ink to paper. `public/og.png` is a 1200×630 social image.
+The source photo is kept outside `public`; generated AVIF/WebP/JPEG files are committed. The script crops to 4:5 and keeps the original colours; set `"duotone": true` in the config for the warm ink→paper treatment. `public/og.png` is a 1200×630 social image.
 
 Edit CSS custom properties in `src/styles/tokens.css` to change the palette. Plum and Ochre alternatives are documented there. The Matcha dark theme follows the OS until the visitor chooses a preference; blocked local storage is supported.
 
