@@ -1,0 +1,15 @@
+:root {
+ --bg:#F4F1E8; --surface:#ECE8DB; --ink:#1F1D18; --muted:#68645A; --rule:#D6D1C2; --rule-strong:#8C8576; --accent:#4A6B2A; --accent-tint:#E2E6CF; --strawberry:#A8405A; --selection:#F2C9D2;
+ --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+ --step--1:.8125rem;--step-0:1.0625rem;--step-1:1.3125rem;--step-2:1.625rem;--step-3:clamp(1.75rem,3.5vw,2.25rem);--step-4:clamp(2.5rem,6vw,4.5rem);
+ --mono:'IBM Plex Mono',monospace;--sans:'Schibsted Grotesk Variable',sans-serif;
+ color-scheme:light;
+}
+:root[data-theme='dark'] {--bg:#1B1A16;--surface:#24231E;--ink:#ECE8DC;--muted:#A6A192;--rule:#38362F;--rule-strong:#716B5F;--accent:#A9C77E;--accent-tint:#2C3323;--strawberry:#EE9AAE;--selection:#5A2F3A;color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme]){--bg:#1B1A16;--surface:#24231E;--ink:#ECE8DC;--muted:#A6A192;--rule:#38362F;--rule-strong:#716B5F;--accent:#A9C77E;--accent-tint:#2C3323;--strawberry:#EE9AAE;--selection:#5A2F3A;color-scheme:dark}}
+/* Alternatives: replace the matching light/dark values above.
+ Plum light: bg #F6F1E9, surface #EFE8DC, ink #221C17, muted #6B6158, rule #D9CFC1, accent #7A2E52.
+ Plum dark: bg #1D1916, surface #26211D, ink #EDE6DB, muted #A89D90, rule #3A332D, accent #E39BBE.
+ Ochre light: bg #F7F3EC, surface #EEE8DD, ink #1E1A16, muted #6A6157, rule #DAD1C3, accent #8A5A00.
+ Ochre dark: bg #1C1915, surface #25211C, ink #EEE7DA, muted #A99E8F, rule #3B342C, accent #E0B456.
+*/

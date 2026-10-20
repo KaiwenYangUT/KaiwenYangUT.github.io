@@ -1,0 +1,6 @@
+import { entriesFor } from '../lib/selectors';
+import { pageMeta } from '../lib/meta';
+import { PageHeading,EntryRow,TagList,CrossLinks,EntryLinks } from '../components/Shared';
+import s from '../components/Entries.module.css';
+export const meta=()=>pageMeta('Research','Research on acoustic signals and air pollution, and empirical analysis of satellite portfolio strategies.','research');
+export default function Research(){return <div className="container page"><PageHeading number="04" title="Research">Questions worth asking. Methods that make the answers defensible.</PageHeading>{entriesFor('research').map((e,i)=>{if(!('research'in e)||!e.research)return null;const r=e.research;return <EntryRow key={e.id} entry={e} index={`R${i+1}`}><p className="section-label">{r.funding==='paid'?'Paid · Research assistant':r.funding==='course'?'Course research':'Research'}</p><h2>{e.id==='econ-ra'?'Satellite portfolio strategies':e.title}</h2><dl className={s.facts}><dt>Question</dt><dd>{r.question}</dd>{r.supervisor&&<><dt>Supervisor</dt><dd>{r.supervisor}</dd></>}{r.lab&&<><dt>Department</dt><dd>{r.lab}</dd></>}<dt>My role</dt><dd>{r.role}</dd><dt>Methods</dt><dd><TagList tags={r.methods}/></dd><dt>Outputs</dt><dd><ul>{r.outputs.map(o=><li key={o}>{o}</li>)}</ul></dd></dl><EntryLinks entry={e}/><CrossLinks entry={e} section="research"/></EntryRow>})}</div>}

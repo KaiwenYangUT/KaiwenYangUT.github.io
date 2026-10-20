@@ -1,0 +1,10 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {decompress} from 'wawoff2';
+import {Resvg} from '@resvg/resvg-js';
+const fontBuffers=await Promise.all(['node_modules/@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2','node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2'].map(async path=>Buffer.from(await decompress(await readFile(path)))));
+await mkdir('tmp/og-fonts',{recursive:true});
+const fontFiles=await Promise.all(fontBuffers.map(async (font,i)=>{const path=`tmp/og-fonts/font-${i}.ttf`;await writeFile(path,font);return path}));
+const portrait=(await readFile('public/images/portrait-og.jpg')).toString('base64');
+const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630"><rect width="1200" height="630" fill="#F4F1E8"/><path d="M60 105H1140M60 550H1140" stroke="#D6D1C2"/><g fill="#68645A" font-family="IBM Plex Mono" font-size="17"><text x="60" y="68">01 / INDEX</text><text x="950" y="68">TORONTO, ON</text><text x="60" y="592">KAIWENYANGUT.GITHUB.IO</text></g><g fill="#1F1D18" font-family="Schibsted Grotesk" font-weight="600" font-size="76"><text x="60" y="225">Kaiwen (Kevin)</text><text x="60" y="310">Yang.</text></g><text x="64" y="373" fill="#1F1D18" font-family="Schibsted Grotesk" font-size="24">Data science · ML · data engineering</text><circle cx="70" cy="459" r="5" fill="#4A6B2A"/><text x="88" y="466" fill="#4A6B2A" font-family="IBM Plex Mono" font-size="18">OPEN TO INDUSTRY ROLES</text><image href="data:image/jpeg;base64,${portrait}" x="820" y="145" width="280" height="350"/></svg>`;
+const image=new Resvg(svg,{font:{fontFiles,loadSystemFonts:false}}).render().asPng();
+await writeFile('public/og.png',image);console.log('Generated public/og.png (1200 × 630).');

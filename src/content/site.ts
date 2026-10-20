@@ -1,0 +1,21 @@
+export const site = {
+  name: 'Kaiwen (Kevin) Yang', shortName: 'Kaiwen Yang', siteUrl: 'https://kaiwenyangut.github.io',
+  tagline: 'Data science · ML · data engineering',
+  intro: 'I build data systems that hold up outside the notebook: pipelines, models, retrieval, and the evaluation that tells you whether any of it works. MEng @ UofT, TA on the side, open to industry roles.',
+  email: 'kaiwen.yang@mail.utoronto.ca', location: 'Toronto, ON', openToWork: true,
+  github: 'https://github.com/KaiwenYangUT', linkedin: 'https://www.linkedin.com/in/kevin-kaiwen-yang-324877262/',
+  resumePdf: null as string | null,
+  currently: ['meng', 'school-of-cities', 'teaching'],
+  onRotation: ['Daniel Caesar', 'Giveon', 'Olivia Dean', 'The Weeknd'],
+  dataset: [
+    ['name', '"Kaiwen (Kevin) Yang"'], ['based_in', '"Toronto, ON"'],
+    ['status', 'open_to_work', 'AI · data science · data engineering'],
+    ['degree', '"MEng, Computer Engineering (AI/ML)"', 'expected 2027-05'],
+    ['stack', '[python, sql, r, pytorch, spark, typescript]'],
+    ['languages', '[mandarin, english, french@beta]'], ['genre', '"R&B"'],
+    ['on_rotation', '["Daniel Caesar", "Giveon", "Olivia Dean", "The Weeknd"]'],
+    ['coffee_order', '"plum sparkling americano"'],
+    ['actual_order', '"strawberry matcha latte"', 'known issue · wontfix'],
+    ['museums', 'true', 'will read every wall label'],
+  ],
+};

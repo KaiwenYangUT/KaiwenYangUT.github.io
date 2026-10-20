@@ -1,0 +1,10 @@
+import { education } from './education';
+import { work } from './work';
+import { research } from './research';
+import { projects } from './projects';
+import type { Entry } from './types';
+export const allEntries: Entry[] = [...education, ...work, ...research, ...projects];
+export { education, work, research, projects };
+export { teaching } from './teaching';
+export { courses } from './courses';
+export { site } from './site';
