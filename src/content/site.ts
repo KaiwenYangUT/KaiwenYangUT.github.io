@@ -3,7 +3,7 @@ export const site = {
   tagline: 'Data science · ML · data engineering',
   intro: 'I build data systems that hold up outside the notebook: pipelines, models, retrieval, and the evaluation that tells you whether any of it works. MEng @ UofT, TA on the side, open to industry roles.',
   email: 'kaiwen.yang@mail.utoronto.ca', location: 'Toronto, ON', openToWork: true,
-  github: 'https://github.com/KaiwenYangUT', linkedin: 'https://www.linkedin.com/in/kevin-kaiwen-yang-324877262/',
+  github: 'https://github.com/KaiwenYangUT', linkedin: 'https://www.linkedin.com/in/kaiwen-yang-324877262/',
   resumePdf: null as string | null,
   currently: ['meng', 'school-of-cities', 'teaching'],
   onRotation: ['Daniel Caesar', 'Giveon', 'Olivia Dean', 'The Weeknd'],

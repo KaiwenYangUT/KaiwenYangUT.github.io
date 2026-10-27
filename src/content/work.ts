@@ -3,8 +3,9 @@ export const work: WorkEntry[] = [
   {kind:'work',id:'school-of-cities',sections:['work'],title:'Mapping & Data Visualization Assistant',org:'School of Cities, University of Toronto',location:'Toronto, ON',start:'2026-04',end:'present',employment:'part-time',tags:['python','pls','elastic-net','elt','dashboards'],bullets:[
     'Integrated three elections and census data in Python; implemented election–census interpolation using population weights.',
     'Modeled electoral participation using PLS, Elastic Net, and supervised PCA; validated with spatially blocked nested cross-validation.',
-    'Delivered 6 reproducible ELT pipelines and a real-time monitor; developed 5 interactive dashboards and 6 analytical figures.'
-  ]},
+    'Delivered 6 reproducible ELT pipelines and a real-time monitor; developed 5 interactive dashboards and 6 analytical figures.',
+    'Co-authored “One city, uneven participation” with Aniket Kali: an interactive report exploring neighbourhood patterns in voter turnout across three Toronto elections. Published by the School of Cities as Part 8 of Place & Politics in Toronto (October 2026).'
+  ],links:[{label:'Read report: One city, uneven participation',href:'https://schoolofcities.github.io/place-and-politics-toronto/toronto-turnout',kind:'report'}]},
   {kind:'work',id:'ta',sections:['work'],title:'Teaching Assistant',org:'University of Toronto',location:'Toronto, ON',start:'2025-09',end:'present',employment:'part-time',tags:['python','r','teaching'],seeAlsoRoute:'/teaching',summary:'12 Python labs designed · 600+ students mentored · 55 teams guided',bullets:[
     'Designed 12 Python labs and two mock assignments; helped optimize grading rubrics, improving grading speed by 20%.',
     'Mentored 600+ students in Python/R modeling and visualization; guided 55 teams on data pipelines and web deployment.'
